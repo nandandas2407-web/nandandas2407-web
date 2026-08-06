@@ -6,7 +6,7 @@
 
 <div align="center">
 
-[![Portfolio](https://img.shields.io/badge/↗_Portfolio-nandandas369.netlify.app-0d0716?style=for-the-badge&labelColor=1c1533&color=a855f7)](https://nandandas369.netlify.app)
+[![Portfolio](https://img.shields.io/badge/↗_Portfolio-nandan36.netlify.app-0d0716?style=for-the-badge&labelColor=1c1533&color=a855f7)](https://nandan36.netlify.app)
 [![Email](https://img.shields.io/badge/✉_Email-nandandas2407@gmail.com-0d0716?style=for-the-badge&labelColor=1c1533&color=a855f7)](mailto:nandandas2407@gmail.com)
 [![npm](https://img.shields.io/badge/npm-~itznd-0d0716?style=for-the-badge&labelColor=1c1533&color=a855f7&logo=npm&logoColor=c084fc)](https://www.npmjs.com/~itznd)
 
