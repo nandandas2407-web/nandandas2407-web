@@ -1,0 +1,94 @@
+<svg width="1400" height="560" viewBox="0 0 1400 560" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="stackBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0d0716"/>
+      <stop offset="100%" stop-color="#07050c"/>
+    </linearGradient>
+    <linearGradient id="graphicsBand" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4c1d95" stop-opacity="0.35"/>
+      <stop offset="50%" stop-color="#7c3aed" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#4c1d95" stop-opacity="0.35"/>
+    </linearGradient>
+    <filter id="chipGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="3"/>
+    </filter>
+    <style>
+      <![CDATA[
+        .chip { transition: none; }
+        .chip rect { fill: #14101f; stroke: #352a52; stroke-width: 1; }
+        .chip.core rect { fill: #1e1433; stroke: #7c3aed; stroke-width: 1.2; }
+        .chiplabel { font-family: 'JetBrains Mono','Courier New',monospace; font-size: 13px; fill: #d8d0f0; }
+        .chiplabel.core { fill: #f5f3ff; font-weight: 600; }
+        .lanelabel { font-family: 'JetBrains Mono','Courier New',monospace; font-size: 12px; fill: #6b6289; letter-spacing: 2px; }
+        .laneheading { font-family: 'Space Grotesk','Segoe UI',sans-serif; font-size: 19px; font-weight: 600; fill: #f5f3ff; }
+        .lanenote { font-family: 'Inter','Segoe UI',sans-serif; font-size: 13.5px; fill: #a99fc9; }
+
+        .drift { animation: driftY 5s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+        .drift.d1 { animation-delay: 0s; }
+        .drift.d2 { animation-delay: .8s; }
+        .drift.d3 { animation-delay: 1.6s; }
+        .drift.d4 { animation-delay: 2.4s; }
+        @keyframes driftY {
+          0%, 100% { transform: translateY(0); }
+          50% { transform: translateY(-3px); }
+        }
+      ]]>
+    </style>
+  </defs>
+
+  <rect width="1400" height="560" fill="url(#stackBg)"/>
+
+  <!-- ===== LANE 1 : core languages ===== -->
+  <text x="80" y="56" class="lanelabel">01 · FOUNDATION</text>
+  <text x="80" y="84" class="laneheading">Core languages</text>
+  <text x="80" y="107" class="lanenote">what everything else compiles down to</text>
+
+  <g transform="translate(80,132)">
+    <!-- chip(x, w, label) laid manually for alignment -->
+    <g class="chip drift d1"><rect width="112" height="40" rx="8"/><text x="56" y="26" text-anchor="middle" class="chiplabel">JavaScript</text></g>
+    <g class="chip drift d2" transform="translate(124,0)"><rect width="96" height="40" rx="8"/><text x="48" y="26" text-anchor="middle" class="chiplabel">TypeScript</text></g>
+    <g class="chip drift d3" transform="translate(232,0)"><rect width="72" height="40" rx="8"/><text x="36" y="26" text-anchor="middle" class="chiplabel">HTML5</text></g>
+    <g class="chip drift d4" transform="translate(316,0)"><rect width="68" height="40" rx="8"/><text x="34" y="26" text-anchor="middle" class="chiplabel">CSS3</text></g>
+    <g class="chip drift d1" transform="translate(396,0)"><rect width="82" height="40" rx="8"/><text x="41" y="26" text-anchor="middle" class="chiplabel">Python</text></g>
+    <g class="chip drift d2" transform="translate(490,0)"><rect width="92" height="40" rx="8"/><text x="46" y="26" text-anchor="middle" class="chiplabel">Node.js</text></g>
+  </g>
+
+  <line x1="80" y1="204" x2="1320" y2="204" stroke="#1f1832" stroke-width="1"/>
+
+  <!-- ===== LANE 2 : graphics & 3D — the center of gravity ===== -->
+  <rect x="40" y="222" width="1320" height="168" rx="14" fill="url(#graphicsBand)" opacity="0.14"/>
+  <rect x="40" y="222" width="1320" height="168" rx="14" fill="none" stroke="#7c3aed" stroke-opacity="0.4" stroke-width="1.2"/>
+
+  <text x="80" y="256" class="lanelabel">02 · SPECIALTY</text>
+  <text x="80" y="284" class="laneheading">Graphics &amp; real-time rendering</text>
+  <text x="80" y="307" class="lanenote">where the actual work happens — WebGL through to shaders</text>
+
+  <g transform="translate(80,330)">
+    <g class="chip core drift d1"><rect width="96" height="42" rx="8"/><text x="48" y="27" text-anchor="middle" class="chiplabel core">Three.js</text></g>
+    <g class="chip core drift d2" transform="translate(108,0)"><rect width="86" height="42" rx="8"/><text x="43" y="27" text-anchor="middle" class="chiplabel core">WebGL</text></g>
+    <g class="chip drift d3" transform="translate(206,0)"><rect width="90" height="42" rx="8"/><text x="45" y="27" text-anchor="middle" class="chiplabel">OpenGL</text></g>
+    <g class="chip drift d4" transform="translate(308,0)"><rect width="72" height="42" rx="8"/><text x="36" y="27" text-anchor="middle" class="chiplabel">GLSL</text></g>
+    <g class="chip drift d1" transform="translate(392,0)"><rect width="94" height="42" rx="8"/><text x="47" y="27" text-anchor="middle" class="chiplabel">OpenCV</text></g>
+    <g class="chip drift d2" transform="translate(498,0)"><rect width="110" height="42" rx="8"/><text x="55" y="27" text-anchor="middle" class="chiplabel">Canvas API</text></g>
+  </g>
+
+  <line x1="80" y1="412" x2="1320" y2="412" stroke="#1f1832" stroke-width="1"/>
+
+  <!-- ===== LANE 3 : frameworks + tooling ===== -->
+  <text x="80" y="446" class="lanelabel">03 · DELIVERY</text>
+  <text x="80" y="474" class="laneheading">Frameworks &amp; shipping</text>
+  <text x="80" y="497" class="lanenote">how it gets built, versioned, and out the door — from Termux</text>
+
+  <g transform="translate(80,520)">
+    <g class="chip drift d1"><rect width="70" height="36" rx="8"/><text x="35" y="23" text-anchor="middle" class="chiplabel">React</text></g>
+    <g class="chip drift d2" transform="translate(82,0)"><rect width="100" height="36" rx="8"/><text x="50" y="23" text-anchor="middle" class="chiplabel">Express</text></g>
+    <g class="chip drift d3" transform="translate(194,0)"><rect width="60" height="36" rx="8"/><text x="30" y="23" text-anchor="middle" class="chiplabel">npm</text></g>
+    <g class="chip drift d4" transform="translate(266,0)"><rect width="94" height="36" rx="8"/><text x="47" y="23" text-anchor="middle" class="chiplabel">Webpack</text></g>
+    <g class="chip drift d1" transform="translate(372,0)"><rect width="54" height="36" rx="8"/><text x="27" y="23" text-anchor="middle" class="chiplabel">Git</text></g>
+    <g class="chip drift d2" transform="translate(438,0)"><rect width="76" height="36" rx="8"/><text x="38" y="23" text-anchor="middle" class="chiplabel">GitHub</text></g>
+    <g class="chip drift d3" transform="translate(526,0)"><rect width="80" height="36" rx="8"/><text x="40" y="23" text-anchor="middle" class="chiplabel">Netlify</text></g>
+    <g class="chip drift d4" transform="translate(618,0)"><rect width="90" height="36" rx="8"/><text x="45" y="23" text-anchor="middle" class="chiplabel">VS Code</text></g>
+    <g class="chip core drift d1" transform="translate(720,0)"><rect width="88" height="36" rx="8"/><text x="44" y="23" text-anchor="middle" class="chiplabel core">Termux</text></g>
+    <g class="chip drift d2" transform="translate(820,0)"><rect width="68" height="36" rx="8"/><text x="34" y="23" text-anchor="middle" class="chiplabel">Canva</text></g>
+  </g>
+</svg>

@@ -1,0 +1,180 @@
+<svg width="1400" height="420" viewBox="0 0 1400 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="bgGlow" cx="50%" cy="42%" r="65%">
+      <stop offset="0%" stop-color="#1a0a2e"/>
+      <stop offset="55%" stop-color="#0d0716"/>
+      <stop offset="100%" stop-color="#07050c"/>
+    </radialGradient>
+    <linearGradient id="coreGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#c084fc"/>
+      <stop offset="50%" stop-color="#a855f7"/>
+      <stop offset="100%" stop-color="#7c3aed"/>
+    </linearGradient>
+    <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7c3aed" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#c084fc" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#7c3aed" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="starGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#f5f3ff"/>
+      <stop offset="100%" stop-color="#f5f3ff" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="softBlur" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8"/>
+    </filter>
+    <filter id="tinyBlur" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="1.4"/>
+    </filter>
+    <clipPath id="frame"><rect width="1400" height="420" rx="0"/></clipPath>
+
+    <style>
+      <![CDATA[
+        .fieldstar { animation: twinkle 3.6s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+        .fieldstar.d1 { animation-delay: .2s; }
+        .fieldstar.d2 { animation-delay: 1.1s; }
+        .fieldstar.d3 { animation-delay: 1.9s; }
+        .fieldstar.d4 { animation-delay: .7s; }
+        .fieldstar.d5 { animation-delay: 2.4s; }
+        @keyframes twinkle {
+          0%, 100% { opacity: .25; }
+          50% { opacity: 1; }
+        }
+
+        .orbit { transform-box: fill-box; transform-origin: 700px 210px; }
+        .orbitA { animation: spin 22s linear infinite; }
+        .orbitB { animation: spin 34s linear infinite reverse; }
+        .orbitC { animation: spin 48s linear infinite; }
+        @keyframes spin {
+          from { transform: rotate(0deg); }
+          to { transform: rotate(360deg); }
+        }
+
+        .satellite { animation: pulse 2.8s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+        .satellite.p2 { animation-delay: .6s; }
+        .satellite.p3 { animation-delay: 1.2s; }
+        .satellite.p4 { animation-delay: 1.8s; }
+        @keyframes pulse {
+          0%, 100% { r: 3.2; opacity: .75; }
+          50% { r: 5; opacity: 1; }
+        }
+
+        .core { animation: breathe 4.5s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+        @keyframes breathe {
+          0%, 100% { transform: scale(1); }
+          50% { transform: scale(1.045); }
+        }
+
+        .sweep { animation: sweepMove 5s ease-in-out infinite; }
+        @keyframes sweepMove {
+          0% { transform: translateX(-120px); opacity: 0; }
+          15% { opacity: .55; }
+          85% { opacity: .55; }
+          100% { transform: translateX(120px); opacity: 0; }
+        }
+
+        .rise { animation: riseIn 1s cubic-bezier(.16,1,.3,1) both; }
+        .rise.r1 { animation-delay: .05s; }
+        .rise.r2 { animation-delay: .18s; }
+        .rise.r3 { animation-delay: .32s; }
+        @keyframes riseIn {
+          from { opacity: 0; transform: translateY(10px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+      ]]>
+    </style>
+  </defs>
+
+  <g clip-path="url(#frame)">
+    <rect width="1400" height="420" fill="url(#bgGlow)"/>
+
+    <!-- faint grid, evokes render-viewport / editor floor -->
+    <g stroke="#7c3aed" stroke-opacity="0.06" stroke-width="1">
+      <line x1="0" y1="70" x2="1400" y2="70"/>
+      <line x1="0" y1="140" x2="1400" y2="140"/>
+      <line x1="0" y1="280" x2="1400" y2="280"/>
+      <line x1="0" y1="350" x2="1400" y2="350"/>
+      <line x1="175" y1="0" x2="175" y2="420"/>
+      <line x1="350" y1="0" x2="350" y2="420"/>
+      <line x1="1050" y1="0" x2="1050" y2="420"/>
+      <line x1="1225" y1="0" x2="1225" y2="420"/>
+    </g>
+
+    <!-- scattered field stars: commits as stars -->
+    <g fill="#f5f3ff">
+      <circle class="fieldstar d1" cx="95" cy="60" r="1.4"/>
+      <circle class="fieldstar d3" cx="150" cy="150" r="1"/>
+      <circle class="fieldstar d2" cx="230" cy="90" r="1.6"/>
+      <circle class="fieldstar d4" cx="80" cy="240" r="1.1"/>
+      <circle class="fieldstar d5" cx="190" cy="320" r="1.3"/>
+      <circle class="fieldstar d1" cx="300" cy="200" r="1"/>
+      <circle class="fieldstar d3" cx="60" cy="340" r="1.4"/>
+      <circle class="fieldstar d2" cx="1300" cy="70" r="1.5"/>
+      <circle class="fieldstar d4" cx="1240" cy="160" r="1.1"/>
+      <circle class="fieldstar d1" cx="1350" cy="230" r="1.3"/>
+      <circle class="fieldstar d5" cx="1180" cy="300" r="1"/>
+      <circle class="fieldstar d3" cx="1320" cy="340" r="1.4"/>
+      <circle class="fieldstar d2" cx="1100" cy="100" r="1.2"/>
+      <circle class="fieldstar d4" cx="420" cy="60" r="1"/>
+      <circle class="fieldstar d1" cx="980" cy="55" r="1.2"/>
+    </g>
+
+    <!-- orbit rings, three depths, evokes 3D render / commit-graph universe -->
+    <g class="orbit orbitC" opacity="0.5">
+      <ellipse cx="700" cy="210" rx="330" ry="118" fill="none" stroke="url(#ringGrad)" stroke-width="1"/>
+    </g>
+    <g class="orbit orbitB" opacity="0.65">
+      <ellipse cx="700" cy="210" rx="255" ry="90" fill="none" stroke="url(#ringGrad)" stroke-width="1.2"/>
+    </g>
+    <g class="orbit orbitA" opacity="0.8">
+      <ellipse cx="700" cy="210" rx="185" ry="64" fill="none" stroke="url(#ringGrad)" stroke-width="1.4"/>
+    </g>
+
+    <!-- satellites riding the rings -->
+    <g class="orbit orbitA">
+      <circle class="satellite" cx="885" cy="210" r="3.6" fill="#f5f3ff"/>
+      <circle cx="885" cy="210" r="9" fill="url(#starGlow)"/>
+    </g>
+    <g class="orbit orbitB">
+      <circle class="satellite p2" cx="445" cy="210" r="3.6" fill="#e9d5ff"/>
+      <circle cx="445" cy="210" r="9" fill="url(#starGlow)"/>
+    </g>
+    <g class="orbit orbitC">
+      <circle class="satellite p3" cx="1030" cy="210" r="3.2" fill="#c084fc"/>
+      <circle cx="1030" cy="210" r="8" fill="url(#starGlow)"/>
+    </g>
+    <g class="orbit orbitB" style="animation-delay:-9s">
+      <circle class="satellite p4" cx="955" cy="210" r="3" fill="#f5f3ff"/>
+      <circle cx="955" cy="210" r="7" fill="url(#starGlow)"/>
+    </g>
+
+    <!-- core: the repo / the vertex everything renders from -->
+    <circle cx="700" cy="210" r="34" fill="url(#coreGrad)" filter="url(#softBlur)" opacity="0.55"/>
+    <g class="core">
+      <circle cx="700" cy="210" r="17" fill="url(#coreGrad)"/>
+      <circle cx="700" cy="210" r="17" fill="none" stroke="#f5f3ff" stroke-opacity="0.5" stroke-width="1"/>
+      <path d="M700 197 L711 204 L711 217 L700 224 L689 217 L689 204 Z" fill="none" stroke="#f5f3ff" stroke-opacity="0.85" stroke-width="1" filter="url(#tinyBlur)"/>
+    </g>
+
+    <!-- horizontal light sweep across the scene -->
+    <rect class="sweep" x="0" y="0" width="70" height="420" fill="#ffffff" opacity="0" style="mix-blend-mode:overlay"/>
+
+    <!-- wordmark + role, staged rise-in -->
+    <g class="rise r1">
+      <text x="80" y="185" font-family="'Space Grotesk', 'Segoe UI', sans-serif" font-size="52" font-weight="700" fill="#f5f3ff" letter-spacing="0.5">Nandan Das</text>
+    </g>
+    <g class="rise r2">
+      <text x="81" y="222" font-family="'JetBrains Mono', 'Courier New', monospace" font-size="15" font-weight="500" fill="#c084fc" letter-spacing="1.5">FRONTEND · WEBGL &amp; 3D · TERMUX-NATIVE</text>
+    </g>
+    <g class="rise r3">
+      <text x="81" y="256" font-family="'Inter', 'Segoe UI', sans-serif" font-size="15.5" fill="#a99fc9" letter-spacing="0.2">renders in real time, builds entirely from a phone</text>
+    </g>
+
+    <!-- bottom hairline + prompt, terminal register -->
+    <line x1="80" y1="345" x2="1320" y2="345" stroke="#7c3aed" stroke-opacity="0.22" stroke-width="1"/>
+    <g class="rise r3">
+      <text x="80" y="374" font-family="'JetBrains Mono', 'Courier New', monospace" font-size="13" fill="#6b6289">
+        <tspan fill="#a855f7">$</tspan> whoami <tspan fill="#4c4468">→</tspan> self-taught · India-based · ships from Termux
+      </text>
+    </g>
+  </g>
+</svg>

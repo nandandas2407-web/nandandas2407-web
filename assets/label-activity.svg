@@ -1,0 +1,16 @@
+<svg width="1400" height="90" viewBox="0 0 1400 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      <![CDATA[
+        .liveDot { animation: livepulse2 1.8s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+        @keyframes livepulse2 { 0%,100% { opacity: .35; r: 3.5; } 50% { opacity: 1; r: 5; } }
+      ]]>
+    </style>
+  </defs>
+  <text x="80" y="34" font-family="'JetBrains Mono','Courier New',monospace" font-size="12" fill="#7c6ba0" letter-spacing="2">04 · ACTIVITY</text>
+  <text x="80" y="66" font-family="'Space Grotesk','Segoe UI',sans-serif" font-size="26" font-weight="700" fill="#f5f3ff">Still committing</text>
+  <g transform="translate(300,58)">
+    <circle class="liveDot" cx="0" cy="0" r="4" fill="#4ade80"/>
+    <text x="14" y="4" font-family="'JetBrains Mono','Courier New',monospace" font-size="12.5" fill="#8b7fb0">live from GitHub</text>
+  </g>
+</svg>

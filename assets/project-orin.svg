@@ -1,0 +1,72 @@
+<svg width="1400" height="290" viewBox="0 0 1400 290" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="orinBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#160f28"/>
+      <stop offset="100%" stop-color="#0a0714"/>
+    </linearGradient>
+    <linearGradient id="orinAccent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#a855f7"/>
+      <stop offset="100%" stop-color="#c084fc"/>
+    </linearGradient>
+    <filter id="orinGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="14"/>
+    </filter>
+    <style>
+      <![CDATA[
+        .cursor { animation: blink 1.1s step-end infinite; }
+        @keyframes blink { 50% { opacity: 0; } }
+        .typeline { stroke-dasharray: 420; stroke-dashoffset: 420; animation: type 3.2s steps(60,end) infinite; }
+        @keyframes type { 0% { stroke-dashoffset: 420; } 55% { stroke-dashoffset: 0; } 90% { stroke-dashoffset: 0; } 100% { stroke-dashoffset: 420; } }
+        .dot-live { animation: livepulse 1.8s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+        @keyframes livepulse { 0%,100% { opacity: .4; } 50% { opacity: 1; } }
+        .label { font-family: 'Inter','Segoe UI',sans-serif; font-size: 14px; fill: #b7adda; }
+        .kicker { font-family: 'JetBrains Mono','Courier New',monospace; font-size: 12px; fill: #7c6ba0; letter-spacing: 2px; }
+      ]]>
+    </style>
+  </defs>
+
+  <rect width="1400" height="290" rx="18" fill="url(#orinBg)"/>
+  <rect width="1400" height="290" rx="18" fill="none" stroke="#2a2145" stroke-width="1"/>
+  <circle cx="1300" cy="40" r="90" fill="#7c3aed" opacity="0.12" filter="url(#orinGlow)"/>
+
+  <!-- left: identity -->
+  <g transform="translate(56,48)">
+    <text class="kicker" y="0">FLAGSHIP PROJECT</text>
+    <text y="38" font-family="'Space Grotesk','Segoe UI',sans-serif" font-size="34" font-weight="700" fill="#f5f3ff">OrinIDE</text>
+    <text y="66" font-family="'JetBrains Mono','Courier New',monospace" font-size="13" fill="#c084fc">npm i -g orin-ide</text>
+
+    <text class="label" y="108" xml:space="preserve">A full code editor that runs in the browser off a</text>
+    <text class="label" y="130" xml:space="preserve">local Node.js + Express server. No Electron shell,</text>
+    <text class="label" y="152" xml:space="preserve">no cloud account — one command, real terminal.</text>
+
+    <g transform="translate(0,182)">
+      <circle class="dot-live" cx="4" cy="-4" r="4" fill="#4ade80"/>
+      <text x="16" y="0" class="label" fill="#9c93bf" font-size="13">Runs identically on desktop and on Android via Termux</text>
+    </g>
+  </g>
+
+  <!-- right: feature chips, real mechanics not marketing fluff -->
+  <g transform="translate(760,56)">
+    <text class="kicker" y="0">WHAT'S ACTUALLY INSIDE</text>
+    <g transform="translate(0,20)" font-family="'JetBrains Mono','Courier New',monospace" font-size="12.5" fill="#e4defa">
+      <g transform="translate(0,0)"><rect width="168" height="34" rx="8" fill="#1c1533" stroke="#3a2e5c"/><text x="14" y="22">Real PTY terminal</text></g>
+      <g transform="translate(180,0)"><rect width="176" height="34" rx="8" fill="#1c1533" stroke="#3a2e5c"/><text x="14" y="22">WebSocket streaming</text></g>
+      <g transform="translate(368,0)"><rect width="150" height="34" rx="8" fill="#1c1533" stroke="#3a2e5c"/><text x="14" y="22">Diff viewer</text></g>
+
+      <g transform="translate(0,44)"><rect width="192" height="34" rx="8" fill="#241a3d" stroke="#7c3aed"/><text x="14" y="22" fill="#f5f3ff">Multi-model AI chat</text></g>
+      <g transform="translate(204,44)"><rect width="150" height="34" rx="8" fill="#1c1533" stroke="#3a2e5c"/><text x="14" y="22">Git panel</text></g>
+      <g transform="translate(366,44)"><rect width="152" height="34" rx="8" fill="#1c1533" stroke="#3a2e5c"/><text x="14" y="22">20 languages</text></g>
+
+      <g transform="translate(0,88)"><rect width="150" height="34" rx="8" fill="#1c1533" stroke="#3a2e5c"/><text x="14" y="22">Vim mode</text></g>
+      <g transform="translate(162,88)"><rect width="176" height="34" rx="8" fill="#1c1533" stroke="#3a2e5c"/><text x="14" y="22">Split terminal</text></g>
+      <g transform="translate(350,88)"><rect width="170" height="34" rx="8" fill="#1c1533" stroke="#3a2e5c"/><text x="14" y="22">Offline-capable</text></g>
+    </g>
+  </g>
+
+  <!-- animated typing line, bottom -->
+  <g transform="translate(56,244)">
+    <text font-family="'JetBrains Mono','Courier New',monospace" font-size="13" fill="#4c4468">$ npx orin-ide</text>
+    <line class="typeline" x1="152" y1="-4" x2="152" y2="-4" stroke="none"/>
+    <rect class="cursor" x="150" y="-13" width="8" height="14" fill="#a855f7"/>
+  </g>
+</svg>

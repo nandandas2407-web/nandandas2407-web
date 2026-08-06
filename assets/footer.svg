@@ -1,0 +1,33 @@
+<svg width="1400" height="130" viewBox="0 0 1400 130" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="footBg" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" stop-color="#0a0714"/>
+      <stop offset="100%" stop-color="#07050c"/>
+    </linearGradient>
+    <radialGradient id="footGlow" cx="50%" cy="0%" r="80%">
+      <stop offset="0%" stop-color="#7c3aed" stop-opacity="0.14"/>
+      <stop offset="100%" stop-color="#7c3aed" stop-opacity="0"/>
+    </radialGradient>
+    <style>
+      <![CDATA[
+        .fspin { animation: fspin 30s linear infinite; transform-box: fill-box; transform-origin: 700px 40px; }
+        @keyframes fspin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+        .fcore { animation: fbreathe 4s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+        @keyframes fbreathe { 0%,100% { transform: scale(1); } 50% { transform: scale(1.08); } }
+      ]]>
+    </style>
+  </defs>
+
+  <rect width="1400" height="130" fill="url(#footBg)"/>
+  <rect width="1400" height="130" fill="url(#footGlow)"/>
+
+  <g class="fspin" opacity="0.55">
+    <ellipse cx="700" cy="40" rx="140" ry="20" fill="none" stroke="#7c3aed" stroke-width="1"/>
+  </g>
+  <g class="fcore">
+    <circle cx="700" cy="40" r="7" fill="#c084fc"/>
+  </g>
+
+  <text x="700" y="92" text-anchor="middle" font-family="'JetBrains Mono','Courier New',monospace" font-size="13" fill="#6b6289">built with focus, shipped from a phone</text>
+  <text x="700" y="115" text-anchor="middle" font-family="'Inter','Segoe UI',sans-serif" font-size="12.5" fill="#4c4468">© Nandan Das</text>
+</svg>

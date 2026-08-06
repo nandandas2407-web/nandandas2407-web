@@ -1,0 +1,48 @@
+<svg width="678" height="290" viewBox="0 0 678 290" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="nxBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#160f28"/>
+      <stop offset="100%" stop-color="#0a0714"/>
+    </linearGradient>
+    <style>
+      <![CDATA[
+        .bar { animation: barlife 2.6s ease-in-out infinite; transform-box: fill-box; transform-origin: bottom; }
+        .bar.b1 { animation-delay: 0s; } .bar.b2 { animation-delay: .18s; } .bar.b3 { animation-delay: .36s; }
+        .bar.b4 { animation-delay: .54s; } .bar.b5 { animation-delay: .72s; } .bar.b6 { animation-delay: .9s; }
+        .bar.b7 { animation-delay: 1.08s; } .bar.b8 { animation-delay: 1.26s; }
+        @keyframes barlife { 0%,100% { transform: scaleY(1); } 50% { transform: scaleY(0.42); } }
+        .kicker { font-family: 'JetBrains Mono','Courier New',monospace; font-size: 12px; fill: #7c6ba0; letter-spacing: 2px; }
+        .label { font-family: 'Inter','Segoe UI',sans-serif; font-size: 13.5px; fill: #b7adda; }
+      ]]>
+    </style>
+  </defs>
+
+  <rect width="678" height="290" rx="18" fill="url(#nxBg)"/>
+  <rect width="678" height="290" rx="18" fill="none" stroke="#2a2145" stroke-width="1"/>
+
+  <g transform="translate(40,44)">
+    <text class="kicker" y="0">JS LIBRARY · v2.0.0</text>
+    <text y="38" font-family="'Space Grotesk','Segoe UI',sans-serif" font-size="30" font-weight="700" fill="#f5f3ff">NandanX.js</text>
+    <text class="label" y="66" fill="#c084fc" font-family="'JetBrains Mono','Courier New',monospace" font-size="13">60+ animation engines</text>
+
+    <text class="label" y="102" xml:space="preserve">A creative UI-animation library, written from</text>
+    <text class="label" y="123" xml:space="preserve">scratch — entirely on Termux, on Android.</text>
+    <text class="label" y="144" xml:space="preserve">Ships with a full docs site built in the same</text>
+    <text class="label" y="165" xml:space="preserve">spirit as the Three.js documentation.</text>
+  </g>
+
+  <!-- animated bar visualization: engines "running" -->
+  <g transform="translate(40,222)">
+    <g fill="#a855f7">
+      <rect class="bar b1" x="0" y="0" width="8" height="26" rx="2"/>
+      <rect class="bar b2" x="14" y="-6" width="8" height="32" rx="2"/>
+      <rect class="bar b3" x="28" y="4" width="8" height="22" rx="2"/>
+      <rect class="bar b4" x="42" y="-10" width="8" height="36" rx="2"/>
+      <rect class="bar b5" x="56" y="0" width="8" height="26" rx="2"/>
+      <rect class="bar b6" x="70" y="-4" width="8" height="30" rx="2"/>
+      <rect class="bar b7" x="84" y="6" width="8" height="20" rx="2"/>
+      <rect class="bar b8" x="98" y="-8" width="8" height="34" rx="2"/>
+    </g>
+    <text x="122" y="20" font-family="'JetBrains Mono','Courier New',monospace" font-size="12" fill="#6b6289">engines idling</text>
+  </g>
+</svg>
